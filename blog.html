@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+
+    <!-- DaisyUI + Tailwind CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Fontawesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/bbfc4be646.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
+    />
+
+    <!-- Vanila CSS -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+      .lexend {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="lexend">
+    <header>
+      <nav class="shadow fixed top-0 left-0 right-0 backdrop-blur w-full z-[1]">
+        <section class="bg-[#F9F7F3] py-4">
+          <div class="navbar w-[85%] mx-auto">
+            <div class="navbar-start">
+              <button id="home" class="btn btn-success lg:text-lg">Home</button>
+            </div>
+            <div class="navbar-center mx-auto">
+              <img class="w-8 lg:w-[12%] mx-2" src="images/logo.png" alt="" />
+              <h1 class="hidden lg:flex font-semibold lg:text-xl text-center">
+                Donate Bangladesh
+              </h1>
+            </div>
+            <div class="navbar-end">
+              <img class="w-4 lg:w-fit pr-1" src="images/coin.png" alt="" />
+              <h1 class="font-semibold text-[#111111B3] lg:text-xl text-center">
+                <span>5500</span>BDT
+              </h1>
+            </div>
+          </div>
+        </section>
+      </nav>
+    </header>
+    <main class="mt-40">
+      <section class="w-[85%] mx-auto">
+        <h1 class="text-2xl font-bold lg:text-4xl">Important FAQ <i class="fa-regular fa-comment-question fa-bounce fa-lg"></i></h1>
+        <div class="collapse collapse-arrow bg-white border-2 my-6">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is Document Object Model(DOM)?
+          </div>
+          <div class="collapse-content">
+            <p>
+              The Document Object Model (DOM) is a programming interface for web
+              documents. It represents the structure of a document as a tree of
+              objects, where each node corresponds to a part of the document
+              (like elements, attributes, and text). The DOM allows programming
+              languages, especially JavaScript, to manipulate the content,
+              structure, and style of web pages dynamically. This means you can
+              add, remove, or change elements and their attributes in response
+              to user actions or other events.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-white border-2 my-6">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              To select an element from the DOM, you can use various methods
+              provided by JavaScript: 1.document.getElementById(id): Selects an
+              element by its unique ID.
+              2.document.getElementsByClassName(className): Selects all elements
+              with a specific class name.
+              3.document.getElementsByTagName(tagName): Selects all elements
+              with a specific tag name. 4.document.querySelector(selector):
+              Selects the first element that matches a CSS selector.
+              5.document.querySelectorAll(selector): Selects all elements that
+              match a CSS selector.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-white border-2 my-6">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM,and why is it
+            useful?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Event delegation is a programming technique used in the DOM that
+              involves attaching a single event listener to a parent element
+              instead of individual listeners on each child element. When an
+              event occurs on a child element, the event bubbles up to the
+              parent, allowing the parent to handle the event. Performance: By
+              reducing the number of event listeners, it conserves memory and
+              improves performance, especially in scenarios with many
+              elements.Dynamic Content Handling: It simplifies the management of
+              events for elements that may be added or removed dynamically. New
+              child elements will automatically be covered by the parent
+              listener without needing additional code.Cleaner Code:
+              Centralizing event handling in a single listener leads to cleaner,
+              more maintainable code, as you avoid repetitive listener
+              attachments.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-white border-2 my-6">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate and element's attributes and style using the
+            DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              DOM manipulation. Specifically, it focuses on the techniques and
+              methods used to interact with and modify the structure and
+              appearance of HTML elements through JavaScript.DOM (Document
+              Object Model): The hierarchical representation of an HTML document
+              as a tree structure of objects, allowing JavaScript to access and
+              manipulate its elements. Attributes: Additional properties
+              assigned to HTML elements, such as id, class, href, src, etc.
+              Style: The presentation characteristics of an HTML element,
+              including font, color, size, spacing, and more. JavaScript
+              methods: Functions that interact with the DOM to get, set, or
+              remove attribute and style properties. Element selection:
+              Techniques to identify specific HTML elements using methods like
+              getElementById(), getElementsByClassName(), and querySelector().
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/blog.js"></script>
+  </body>
+</html>
